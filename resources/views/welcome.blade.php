@@ -1,138 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-app-layouts>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title -->
-    <title> Digital Bundle Tools</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.png') }}">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
-    <!-- Fontawesome -->
-    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome-all.min.css') }}">
-    <!-- Slick -->
-    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
-    <!-- magnific popup -->
-    <link rel="stylesheet" href="{{ asset('assets/css/magnific-popup.css') }}">
-    <!-- line awesome -->
-    <link rel="stylesheet" href="{{ asset('assets/css/line-awesome.min.css') }}">
-    <!-- Main css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
-    <style>
-        .timer {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #FF0000;
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <!--==================== Preloader Start ====================-->
-    <div class="loader-mask">
-        <div class="loader">
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <!--==================== Preloader End ====================-->
-
-    <!--==================== Overlay Start ====================-->
-    <div class="overlay"></div>
-    <!--==================== Overlay End ====================-->
-
-    <!--==================== Sidebar Overlay End ====================-->
-    <div class="side-overlay"></div>
-    <!--==================== Sidebar Overlay End ====================-->
-
-    <!-- ==================== Scroll to Top End Here ==================== -->
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-    <!-- ==================== Scroll to Top End Here ==================== -->
-
-    <!-- ==================== Mobile Menu Start Here ==================== -->
-    <div class="mobile-menu d-lg-none d-block">
-        <button type="button" class="close-button"> <i class="las la-times"></i> </button>
-        <div class="mobile-menu__inner">
-            <a href="index.html" class="mobile-menu__logo">
-                <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Logo">
-            </a>
-            <div class="mobile-menu__menu">
-
-                <ul class="nav-menu flx-align nav-menu--mobile">
-                    <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link">Home</a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link">About</a>
-                    </li>
-
-                    <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link">Contact</a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-    <!-- ==================== Mobile Menu End Here ==================== -->
-
-    <!-- ==================== Header Start Here ==================== -->
-    <header class="header">
-        <div class="container container-full">
-            <nav class="header-inner flx-between">
-                <!-- Logo Start -->
-                <div class="logo">
-                    <a href="index.html" class="link">
-                        <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Logo">
-                    </a>
-                </div>
-                <!-- Logo End  -->
-
-                <!-- Menu Start  -->
-                <div class="header-menu d-lg-block d-none">
-
-                    <ul class="nav-menu flx-align ">
-                        <li class="nav-menu__item">
-                            <a href="contact.html" class="nav-menu__link">Home</a>
-                        </li>
-
-                        <li class="nav-menu__item">
-                            <a href="contact.html" class="nav-menu__link">About</a>
-                        </li>
-
-                        <li class="nav-menu__item">
-                            <a href="contact.html" class="nav-menu__link">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Menu End  -->
-
-                <!-- Header Right start -->
-                <div class="header-right flx-align">
-                    <button type="button" class="toggle-mobileMenu d-lg-none"> <i class="las la-bars"></i> </button>
-                </div>
-                <!-- Header Right End  -->
-            </nav>
-        </div>
-    </header>
-    <!-- ==================== Header End Here ==================== -->
-
-    <!-- ======================== Breadcrumb Two Section Start ===================== -->
     <section class="breadcrumb border-bottom p-0 d-block section-bg position-relative z-index-1">
 
         <div class="breadcrumb-two">
-            <img src="{{asset('assets/images/gradients/breadcrumb-gradient-bg.png')}}" alt="" class="bg--gradient">
+            <img src="{{ asset('assets/images/gradients/breadcrumb-gradient-bg.png') }}" alt=""
+                class="bg--gradient">
             <div class="container container-two">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
@@ -140,7 +12,7 @@
 
                             <ul class="breadcrumb-list flx-align gap-2">
                                 <li class="breadcrumb-list__item font-14 text-body">
-                                    <a href="#" class="breadcrumb-list__link text-body hover-text-main">Home</a>
+                                    <a href="{{route('home')}}" class="breadcrumb-list__link text-body hover-text-main">Home</a>
                                 </li>
                                 <li class="breadcrumb-list__item font-14 text-body">
                                     <span class="breadcrumb-list__icon font-10"><i
@@ -196,7 +68,7 @@
             <div class="row gy-4">
                 <div class="col-12">
 
-                    <div class="row">
+                    <div class="row mb-4 gap-4 gap-lg-0">
                         <div class="col-lg-8">
                             <div class="product-details__thumb">
                                 <img src="assets/images/thumbs/product-details.png" alt="">
@@ -235,16 +107,22 @@
                                                 alt=""></span>
                                         <span class="text">Lifetime Access</span>
                                     </li>
+                                    <li class="sidebar-list__item flx-align gap-2 font-14 fw-300">
+                                        <span class="icon"><img src="assets/images/icons/check-cirlce.svg"
+                                                alt=""></span>
+                                        <span class="text">Instant Email Delivery</span>
+                                    </li>
                                 </ul>
 
                                 <div class="flx-between mt-3">
                                     <span class="product-card__author">
-                                        <a href="profile.html" class="link hover-text-decoration-underline">Price :
+                                        <a href="#" class="link hover-text-decoration-underline">Price :
                                         </a>
                                     </span>
                                     <div class="flx-align gap-2">
-                                        <h6 class="product-card__price mb-0">$129</h6>
-                                        <span class="product-card__prevPrice text-decoration-line-through">$236</span>
+                                        <h6 class="product-card__price mb-0">₹499.00</h6>
+                                        <span
+                                            class="product-card__prevPrice text-decoration-line-through">₹4,999.00</span>
                                     </div>
                                 </div>
                                 <hr>
@@ -274,21 +152,6 @@
                                         <span class="name">Category</span>
                                         <span class="details">Script</span>
                                     </li>
-                                    <li class="meta-attribute__item">
-                                        <span class="name">Tags</span>
-                                        <span class="details">
-                                            <a href="#" class="hover-text-decoration-underline">theme,</a>
-                                            <a href="#" class="hover-text-decoration-underline">web
-                                                design,</a>
-                                            <a href="#" class="hover-text-decoration-underline">minimal
-                                                design,</a>
-                                            <a href="#" class="hover-text-decoration-underline">trendy,</a>
-                                            <a href="#" class="hover-text-decoration-underline">responsive,</a>
-                                            <a href="#" class="hover-text-decoration-underline">wordpress,</a>
-                                            <a href="#" class="hover-text-decoration-underline">saas,</a>
-                                            <a href="#" class="hover-text-decoration-underline">dashboard,</a>
-                                        </span>
-                                    </li>
                                 </ul>
                                 <!-- Meta Attribute List End -->
                             </div>
@@ -297,7 +160,9 @@
 
                     </div>
 
-                    <section class="p-o border-bottom">
+                    <br>
+
+                    <section class="p-o border-bottom ">
                         <div class="container container-two">
                             <div class="breadcrumb-tab flx-wrap align-items-start gap-lg-4 gap-2">
                                 <ul class="nav tab-bordered nav-pills" id="pills-tab" role="tablist">
@@ -329,12 +194,6 @@
                                             </span>
                                         </button>
                                     </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-comments-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-comments" type="button" role="tab"
-                                            aria-controls="pills-comments" aria-selected="false">Comments
-                                            (50)</button>
-                                    </li>
                                 </ul>
                                 <div class="social-share">
                                     <button type="button" class="social-share__button">
@@ -363,7 +222,6 @@
                             </div>
                         </div>
                     </section>
-
 
                     <div class="tab-content mt-4" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-product-details" role="tabpanel"
@@ -424,146 +282,39 @@
                         <div class="tab-pane fade" id="pills-rating" role="tabpanel"
                             aria-labelledby="pills-rating-tab" tabindex="0">
                             <div class="product-review-wrapper">
-                                <div class="product-review">
-                                    <div class="product-review__top flx-between">
-                                        <div class="product-review__rating flx-align">
-                                            <div class="d-flex align-items-center gap-1">
-                                                <ul class="star-rating">
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                                <span class="star-rating__text text-body"> 5.0</span>
-                                            </div>
-                                            <span class="product-review__reason">For <span
-                                                    class="product-review__subject">Customer Support</span> </span>
-                                        </div>
-                                        <div class="product-review__date">
-                                            by <a href="#" class="product-review__user text--base">John Doe </a>
-                                            2 month ago
-                                        </div>
-                                    </div>
-                                    <div class="product-review__body">
-                                        <p class="product-review__desc">Lorem ipsum, dolor sit amet consectetur
-                                            adipisicing elit. Quibusdam itaque vitae ex possimus delectus? Voluptas
-                                            expedita accusantium aperiam quo quod dolore dignissimos rerum praesentium
-                                            deserunt libero recusandae quisquam est accusamus eos dolorum sit explicabo,
-                                            sapiente pariatur voluptates veniam aut veritatis, magnam velit similique!
-                                            Ex similique magni labore aperiam, eius quas molestiae accusantium porro
-                                            eaque esse minus amet doloribus quo odit illo doloremque.</p>
-                                    </div>
-                                </div>
-                                <div class="product-review">
-                                    <div class="product-review__top flx-between">
-                                        <div class="product-review__rating flx-align">
-                                            <div class="d-flex align-items-center gap-1">
-                                                <ul class="star-rating">
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                    <li class="star-rating__item font-11"><i class="fas fa-star"></i>
-                                                    </li>
-                                                </ul>
-                                                <span class="star-rating__text text-body"> 5.0</span>
-                                            </div>
-                                            <span class="product-review__reason">For <span
-                                                    class="product-review__subject">Customer Support</span> </span>
-                                        </div>
-                                        <div class="product-review__date">
-                                            by <a href="#" class="product-review__user text--base">John Doe </a>
-                                            2 month ago
-                                        </div>
-                                    </div>
-                                    <div class="product-review__body">
-                                        <p class="product-review__desc">Lorem ipsum, dolor sit amet consectetur
-                                            adipisicing elit. Quibusdam itaque vitae ex possimus delectus? Voluptas
-                                            expedita accusantium aperiam quo quod dolore dignissimos rerum praesentium
-                                            deserunt libero recusandae quisquam est accusamus eos dolorum sit explicabo,
-                                            sapiente pariatur voluptates veniam aut veritatis, magnam velit similique!
-                                            Ex similique magni labore aperiam, eius quas molestiae accusantium porro
-                                            eaque esse minus amet doloribus quo odit illo doloremque.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="pills-comments" role="tabpanel"
-                            aria-labelledby="pills-comments-tab" tabindex="0">
 
-                            <!-- Comment Start -->
-                            <div class="comment mt-64 mb-64">
-                                <h5 class="mb-32">2 Comments</h5>
-                                <ul class="comment-list">
-                                    <li class="comment-list__item d-flex align-items-start gap-sm-4 gap-3">
-                                        <div class="comment-list__thumb flex-shrink-0">
-                                            <img src="assets/images/thumbs/comment1.png" class="cover-img"
-                                                alt="">
-                                        </div>
-                                        <div class="comment-list__content">
-                                            <div class="flx-between gap-2 align-items-start">
-                                                <div>
-                                                    <h6 class="comment-list__name font-18 mb-sm-2 mb-1">Jenny Wilson
-                                                    </h6>
-                                                    <span class="comment-list__date font-14">Jan 21, 2024 at 11:25
-                                                        pm</span>
+                                @foreach ($testimonials as $testimonial)
+                                    <div class="product-review">
+                                        <div class="product-review__top flx-between">
+                                            <div class="product-review__rating flx-align">
+                                                <div class="d-flex align-items-center gap-1">
+                                                    <ul class="star-rating">
+
+                                                        @for ($i = 0; $i < $testimonial['rating']; $i++)
+                                                            <li class="star-rating__item font-11"><i
+                                                                    class="fas fa-star"></i></li>
+                                                        @endfor
+
+                                                    </ul>
+                                                    <span class="star-rating__text text-body">
+                                                        ({{ $testimonial['rating'] }})</span>
                                                 </div>
-                                                <a class="comment-list__reply fw-500 flx-align gap-2 hover-text-decoration-underline"
-                                                    href="#comment-box">
-                                                    Reply
-                                                    <span class="icon"><img src="assets/images/icons/reply-icon.svg"
-                                                            alt=""></span>
-                                                </a>
+                                                <span class="product-review__reason">For <span
+                                                        class="product-review__subject">Customer Support</span> </span>
                                             </div>
-                                            <p class="comment-list__desc mt-3">Lorem ipsum dolor sit amet consectetur.
-                                                Nec nunc pellentesque massa pretium. Quam sapien nec venenatis vivamus
-                                                sed cras faucibus mi viverra. Quam faucibus morbi cras vitae neque.
-                                                Necnunc pellentesque massa pretium.</p>
+                                            <div class="product-review__date">
+                                                by <a href="#"
+                                                    class="product-review__user text--base">{{ $testimonial['name'] }}</a>
+                                                {{ $testimonial['date'] }}
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li>
-                                        <ul class="comment-list comment-list--two">
-                                            <li class="comment-list__item d-flex align-items-start gap-sm-4 gap-3">
-                                                <div class="comment-list__thumb flex-shrink-0">
-                                                    <img src="assets/images/thumbs/comment2.png" class="cover-img"
-                                                        alt="">
-                                                </div>
-                                                <div class="comment-list__content">
-                                                    <div class="flx-between gap-2 align-items-start">
-                                                        <div>
-                                                            <h6 class="comment-list__name font-18 mb-sm-2 mb-1">
-                                                                Courtney Henry</h6>
-                                                            <span class="comment-list__date font-14">Jan 21, 2024 at
-                                                                11:25 pm</span>
-                                                        </div>
-                                                        <a class="comment-list__reply fw-500 flx-align gap-2 hover-text-decoration-underline"
-                                                            href="#comment-box">
-                                                            Reply
-                                                            <span class="icon"><img
-                                                                    src="assets/images/icons/reply-icon.svg"
-                                                                    alt=""></span>
-                                                        </a>
-                                                    </div>
-                                                    <p class="comment-list__desc mt-3">Lorem ipsum dolor sit amet
-                                                        consectetur. Nec nunc pellentesque massa pretium. Quam sapien
-                                                        nec venenatis vivamus sed cras faucibus.</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                        <div class="product-review__body">
+                                            <p class="product-review__desc">{{ $testimonial['review'] }}</p>
+                                        </div>
+                                    </div>
+                                @endforeach
+
                             </div>
-                            <!-- Comment End -->
                         </div>
                     </div>
                 </div>
@@ -571,161 +322,35 @@
             </div>
         </div>
     </div>
-    <!-- ======================= Product Details Section End ==================== -->
 
-    <!-- ==================== Footer Start Here ==================== -->
-    <footer class="footer ">
-        <img src="assets/images/shapes/pattern.png" alt="" class="bg-pattern">
-        <img src="assets/images/shapes/element1.png" alt="" class="element one">
-        <img src="assets/images/shapes/element2.png" alt="" class="element two">
-        <img src="assets/images/gradients/footer-gradient.png" alt="" class="bg--gradient">
+    @push('scripts')
+        <script>
+            // Set the end time to 25 September 2024 at 00:00:00
+            let endTime = new Date("2024-09-25T00:00:00").getTime();
 
-        <div class="container container-two">
-            <div class="row gy-5">
-                <div class="col-xl-3 col-sm-6">
-                    <div class="footer-item">
-                        <div class="footer-item__logo">
-                            <a href="index.html"> <img src="assets/images/logo/white-logo.png" alt=""></a>
-                        </div>
-                        <p class="footer-item__desc">Lorem consultancy elitsed do eiusmod tempor inci didunt ut labore
-                            dolore magna aliqua sed do eiusmod.</p>
-                        <div class="footer-item__social">
-                            <ul class="social-list">
-                                <li class="social-list__item">
-                                    <a href="https://www.facebook.com" class="social-list__link flx-center"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.twitter.com" class="social-list__link flx-center"> <i
-                                            class="fab fa-twitter"></i></a>
-                                </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.linkedin.com" class="social-list__link flx-center"> <i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.pinterest.com" class="social-list__link flx-center"> <i
-                                            class="fab fa-pinterest-p"></i></a>
-                                </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.pinterest.com" class="social-list__link flx-center"> <i
-                                            class="fab fa-youtube"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-sm-6 col-xs-6">
-                    <div class="footer-item">
-                        <h5 class="footer-item__title">Useful Link</h5>
-                        <ul class="footer-menu">
-                            <li class="footer-menu__item"><a href="all-product.html"
-                                    class="footer-menu__link">Product </a></li>
-                            <li class="footer-menu__item"><a href="product-details.html"
-                                    class="footer-menu__link">Product Details</a></li>
-                            <li class="footer-menu__item"><a href="profile.html" class="footer-menu__link">Profile
-                                </a></li>
-                            <li class="footer-menu__item"><a href="cart.html" class="footer-menu__link">Shopping
-                                    Cart</a></li>
-                            <li class="footer-menu__item"><a href="dashboard.html"
-                                    class="footer-menu__link">Dashboard</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-1 d-xl-block d-none"></div>
-                <div class="col-xl-2 col-sm-6 col-xs-6">
-                    <div class="footer-item">
-                        <h5 class="footer-item__title">Quick Links</h5>
-                        <ul class="footer-menu">
-                            <li class="footer-menu__item"><a href="dashboard.html"
-                                    class="footer-menu__link">Dashboard </a></li>
-                            <li class="footer-menu__item"><a href="login.html" class="footer-menu__link">Login </a>
-                            </li>
-                            <li class="footer-menu__item"><a href="register.html"
-                                    class="footer-menu__link">Register</a></li>
-                            <li class="footer-menu__item"><a href="blog.html" class="footer-menu__link">Blog </a>
-                            </li>
-                            <li class="footer-menu__item"><a href="blog-details.html" class="footer-menu__link">Blog
-                                    Details</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-sm-6">
-                    <div class="footer-item">
-                        <h5 class="footer-item__title">Subscribe</h5>
-                        <p class="footer-item__desc">Subscribe our newsletter to get updated the latest news</p>
-                        <form action="#" class="mt-4 subscribe-box d-flex align-items-center flex-column gap-2">
-                            <input type="text" class="form-control common-input pill text-white"
-                                placeholder="Enter Mail">
-                            <button type="submit" class="btn btn-main btn-lg w-100 pill">Subscribe Now</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+            // Update the timer every 1 second
+            let timerInterval = setInterval(function() {
+                // Get the current time
+                let now = new Date().getTime();
 
-    <!-- bottom Footer -->
-    <div class="bottom-footer">
-        <div class="container container-two">
-            <div class="bottom-footer__inner flx-between gap-3">
-                <p class="bottom-footer__text font-14"> Copyright &copy; 2024 DPmarket, All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#" class="footer-link font-14">Terms of service</a>
-                    <a href="#" class="footer-link font-14">Privacy Policy</a>
-                    <a href="contact.html" class="footer-link font-14">cookies</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ==================== Footer End Here ==================== -->
+                // Find the remaining time
+                let timeLeft = endTime - now;
 
+                // Calculate hours, minutes, and seconds
+                let hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+                let minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+                let seconds = Math.floor((timeLeft / 1000) % 60);
 
-    <!-- Jquery js -->
-    <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
-    <!-- Bootstrap Bundle Js -->
-    <script src="{{ asset('assets/js/boostrap.bundle.min.js') }}"></script>
-    <!-- CountDown -->
-    <script src="{{ asset('assets/js/countdown.js') }}"></script>
-    <!-- counter up -->
-    <script src="{{ asset('assets/js/counterup.min.js') }}"></script>
-    <!-- Slick js -->
-    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
-    <!-- magnific popup -->
-    <script src="{{ asset('assets/js/jquery.magnific-popup.js') }}"></script>
+                // Display the result in the timer div
+                document.getElementById("timer").innerHTML = "Offer End " + hours + "h :" + minutes + "m :" + seconds +
+                    "s ";
 
-    <!-- main js -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-
-    <script>
-        // Set the end time to 25 September 2024 at 00:00:00
-        let endTime = new Date("2024-09-25T00:00:00").getTime();
-
-        // Update the timer every 1 second
-        let timerInterval = setInterval(function() {
-            // Get the current time
-            let now = new Date().getTime();
-
-            // Find the remaining time
-            let timeLeft = endTime - now;
-
-            // Calculate hours, minutes, and seconds
-            let hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-            let minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-            let seconds = Math.floor((timeLeft / 1000) % 60);
-
-            // Display the result in the timer div
-            document.getElementById("timer").innerHTML = "Offer End " + hours + "h :" + minutes + "m :" + seconds +
-                "s ";
-
-            // If the countdown is finished, display "Offer Ended"
-            if (timeLeft < 0) {
-                clearInterval(timerInterval);
-                document.getElementById("timer").innerHTML = "Offer Ended";
-            }
-        }, 1000);
-    </script>
-
-</body>
-
-</html>
+                // If the countdown is finished, display "Offer Ended"
+                if (timeLeft < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById("timer").innerHTML = "Offer Ended";
+                }
+            }, 1000);
+        </script>
+    @endpush
+</x-app-layouts>
