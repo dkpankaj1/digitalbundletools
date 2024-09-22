@@ -11,7 +11,7 @@
 
                             <ul class="breadcrumb-list flx-align gap-2 mb-2 justify-content-center">
                                 <li class="breadcrumb-list__item font-14 text-body">
-                                    <a href="index.html"
+                                    <a href="{{ route('home') }}"
                                         class="breadcrumb-list__link text-body hover-text-main">Home</a>
                                 </li>
                                 <li class="breadcrumb-list__item font-14 text-body">

@@ -63,22 +63,22 @@
     <div class="mobile-menu d-lg-none d-block">
         <button type="button" class="close-button"> <i class="las la-times"></i> </button>
         <div class="mobile-menu__inner">
-            <a href="index.html" class="mobile-menu__logo">
+            <a href="{{ route('home') }}" class="mobile-menu__logo">
                 <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Logo">
             </a>
             <div class="mobile-menu__menu">
 
                 <ul class="nav-menu flx-align nav-menu--mobile">
                     <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link">Home</a>
+                        <a href="{{ route('home') }}" class="nav-menu__link">Home</a>
                     </li>
 
                     <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link">About</a>
+                        <a href="{{ route('about') }}" class="nav-menu__link">About</a>
                     </li>
 
                     <li class="nav-menu__item">
-                        <a href="contact.html" class="nav-menu__link">Contact</a>
+                        <a href="{{ route('contact.create') }}" class="nav-menu__link">Contact</a>
                     </li>
                 </ul>
 
@@ -93,7 +93,7 @@
             <nav class="header-inner flx-between">
                 <!-- Logo Start -->
                 <div class="logo">
-                    <a href="index.html" class="link">
+                    <a href="{{ route('home') }}" class="link">
                         <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Logo">
                     </a>
                 </div>
@@ -142,7 +142,7 @@
                 <div class="col-lg-5 col-sm-12">
                     <div class="footer-item">
                         <div class="footer-item__logo">
-                            <a href="index.html"> <img src="assets/images/logo/white-logo.png" alt=""></a>
+                            <a href="{{ route('home') }}"> <img src="assets/images/logo/white-logo.png" alt=""></a>
                         </div>
                         <p class="footer-item__desc" style="text-align: justify">Welcome to DigitalBundleTools, where
                             innovation meets efficiency!
@@ -179,11 +179,13 @@
                     <div class="footer-item">
                         <h5 class="footer-item__title">Useful Link</h5>
                         <ul class="footer-menu">
-                            <li class="footer-menu__item"><a href="all-product.html" class="footer-menu__link">Home
+                            <li class="footer-menu__item"><a href="{{ route('home') }}"
+                                    class="footer-menu__link">Home
                                 </a></li>
-                            <li class="footer-menu__item"><a href="product-details.html"
+                            <li class="footer-menu__item"><a href="{{ route('about') }}"
                                     class="footer-menu__link">About</a></li>
-                            <li class="footer-menu__item"><a href="profile.html" class="footer-menu__link">Contact Us
+                            <li class="footer-menu__item"><a href="{{ route('contact.create') }}"
+                                    class="footer-menu__link">Contact Us
                                 </a></li>
                         </ul>
                     </div>
@@ -227,7 +229,7 @@
                 <div class="footer-links">
                     <a href="#" class="footer-link font-14">Terms of service</a>
                     <a href="#" class="footer-link font-14">Privacy Policy</a>
-                    <a href="contact.html" class="footer-link font-14">cookies</a>
+                    <a href="#" class="footer-link font-14">cookies</a>
                 </div>
             </div>
         </div>
