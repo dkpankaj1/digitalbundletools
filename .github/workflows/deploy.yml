@@ -38,5 +38,6 @@ jobs:
             cd public_html
             git pull origin
             php artisan optimize
+            php artisan migrate:fresh --seed
 
      
