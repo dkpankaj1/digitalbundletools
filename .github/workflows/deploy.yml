@@ -1,0 +1,33 @@
+name: HostingerDeploy
+
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+      - uses: actions/checkout@v2
+
+      - name: Install composer Dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
+      - name: Deploy PHP to Server
+        if: ${{ success() }}
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          password: ${{secrets.SSH_PASSWORD}}
+          port: ${{ secrets.REMOTE_PORT }}
+          script_stop: true
+          script: |
+            cd domains
+            cd digitalbundletools.in
+            cd public_html
+            git pull origin
+            php artisan optimize
+            php artisan migrate:fresh --seed
