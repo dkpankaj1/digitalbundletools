@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $projects = [
+    $projectsList = [
         "Accounting-software (2)",
         "Appartment / Apartment (2)",
         "Bedesk (1)",
@@ -93,9 +93,8 @@ Route::get('/', function () {
         "Photo-Studio-Management (1)",
         "Tailor (1)",
         "Tenant (1)"
-    ];
-    
+    ];    
     return view('welcome', [
-        'projects' => $projects,
+        'projects' => $projectsList,
     ]);
 });
