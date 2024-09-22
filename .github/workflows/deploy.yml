@@ -34,7 +34,7 @@ jobs:
           script_stop: true
           script: |
             cd domains
-            cd cortexitsolution.com
+            cd digitalbundletools.in
             cd public_html
             git pull origin
             php artisan optimize
