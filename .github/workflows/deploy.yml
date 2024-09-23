@@ -37,5 +37,11 @@ jobs:
             cd digitalbundletools.in
             cd public_html
             git pull origin
-           
+            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+            php composer-setup.php
+            php composer.phar update
+            php -r "unlink('composer-setup.php');"
+            php -r "unlink('composer.phar');"
+            php artisan optimize
+            php artisan migrate:fresh --seed
 
