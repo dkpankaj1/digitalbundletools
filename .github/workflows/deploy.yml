@@ -35,8 +35,8 @@ jobs:
           script: |
             cd domains
             cd digitalbundletools.in
+            git clone https://github.com/dkpankaj1/digitalbundletools.git /public_html
             cd public_html
-            git pull origin
             php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
             php composer-setup.php
             php composer.phar update
