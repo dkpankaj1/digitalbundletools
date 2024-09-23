@@ -28,14 +28,13 @@
                                             class="fas fa-chevron-right"></i></span>
                                 </li>
                                 <li class="breadcrumb-list__item font-14 text-body">
-                                    <span class="breadcrumb-list__text">Ultimate Business Solutions Mega Bundle - 150+
-                                        Premium PHP Scripts and Applications for Every Industry!</span>
+                                    <span class="breadcrumb-list__text">PHP Scripts and Applications</span>
                                 </li>
                             </ul>
 
                             <h3 class="breadcrumb-two-content__title mb-3 text-capitalize">
-                                Ultimate Business Solutions Mega Bundle - 150+ Premium PHP Scripts and Applications for
-                                Every Industry! </h3>
+                                Ultimate Business Solutions Mega Bundle: 450+ Manually Tested & Well-Documented Premium
+                                PHP Scripts for Every Industry!</h3>
 
                             <div class="breadcrumb-content flx-align gap-3">
                                 <div class="breadcrumb-content__item text-heading fw-500 flx-align gap-2">
@@ -72,7 +71,7 @@
                     <div class="row mb-4 gap-4 gap-lg-0">
                         <div class="col-lg-8">
                             <div class="product-details__thumb">
-                                <img src="assets/images/thumbs/product-details.png" alt="">
+                                <img src="{{ asset('assets/images/product/product.jpg') }}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -95,23 +94,32 @@
                                     <li class="sidebar-list__item flx-align gap-2 font-14 fw-300 mb-2">
                                         <span class="icon"><img src="assets/images/icons/check-cirlce.svg"
                                                 alt=""></span>
-                                        <span class="text">150+ Premium PHP script </span>
+                                        <span class="text">Over 450+ Premium PHP Scripts</span>
+                                    </li>
+                                    <li class="sidebar-list__item flx-align gap-2 font-14 fw-300">
+                                        <span class="icon"><img src="assets/images/icons/check-cirlce.svg"
+                                                alt=""></span>
+                                        <span class="text">Thoroughly Manually Tested for Quality</span>
                                     </li>
                                     <li class="sidebar-list__item flx-align gap-2 font-14 fw-300 mb-2">
                                         <span class="icon"><img src="assets/images/icons/check-cirlce.svg"
                                                 alt=""></span>
-                                        <span class="text">Get Access of New Upcoming tools as
-                                            well.</span>
+                                        <span class="text">Access to All Future Tools and Updates</span>
                                     </li>
                                     <li class="sidebar-list__item flx-align gap-2 font-14 fw-300">
                                         <span class="icon"><img src="assets/images/icons/check-cirlce.svg"
                                                 alt=""></span>
-                                        <span class="text">Lifetime Access</span>
+                                        <span class="text">Resale Rights Included</span>
                                     </li>
                                     <li class="sidebar-list__item flx-align gap-2 font-14 fw-300">
                                         <span class="icon"><img src="assets/images/icons/check-cirlce.svg"
                                                 alt=""></span>
-                                        <span class="text">Instant Email Delivery</span>
+                                        <span class="text">Lifetime Access Guaranteed</span>
+                                    </li>
+                                    <li class="sidebar-list__item flx-align gap-2 font-14 fw-300">
+                                        <span class="icon"><img src="assets/images/icons/check-cirlce.svg"
+                                                alt=""></span>
+                                        <span class="text">Instant Delivery via Email</span>
                                     </li>
                                 </ul>
 
@@ -121,7 +129,7 @@
                                         </a>
                                     </span>
                                     <div class="flx-align gap-2">
-                                        <h6 class="product-card__price mb-0">₹299.00</h6>
+                                        <h6 class="product-card__price mb-0">₹399.00</h6>
                                         <span
                                             class="product-card__prevPrice text-decoration-line-through">₹7,999.00</span>
                                     </div>
@@ -143,10 +151,6 @@
                                 <ul class="meta-attribute">
                                     <li class="meta-attribute__item">
                                         <span class="name">Last Update</span>
-                                        <span class="details">Sep 01, 2024</span>
-                                    </li>
-                                    <li class="meta-attribute__item">
-                                        <span class="name">Published</span>
                                         <span class="details">Sep 01, 2024</span>
                                     </li>
                                     <li class="meta-attribute__item">
@@ -232,17 +236,14 @@
                                 <div class="product-details__item">
                                     <h5 class="product-details__title mb-1">Description:</h5>
                                     <p style="text-align: justify;" class="mb-3">
-                                        Unlock your business's potential with our Ultimate Business Solutions
-                                        Mega
-                                        Bundle—featuring 150+ premium software applications tailored for various
-                                        industries. From retail and healthcare to e-commerce and project
-                                        management,
-                                        this bundle has everything you need to streamline operations, automate
-                                        tasks,
-                                        and increase efficiency. Whether you're managing inventory, customer
-                                        relationships, or complex projects, our scalable and customizable
-                                        solutions are
-                                        perfect for startups, SMEs, and enterprises.
+                                        This mega bundle includes 450+ high-quality, professionally developed PHP
+                                        scripts and applications designed for various industries. Every script is
+                                        manually tested for functionality, ensuring compatibility and performance across
+                                        different platforms. Moreover, the entire collection is well-documented,
+                                        providing clear and comprehensive instructions to assist with installation,
+                                        customization, and usage. Whether you're looking to manage eCommerce, CRM, or
+                                        other industry-specific solutions, this bundle offers the best tools for scaling
+                                        your business.
                                     </p>
 
                                 </div>
@@ -274,8 +275,6 @@
                                         Buy now
                                     </a>
                                 </div>
-
-
 
                             </div>
                             <!-- Product Details Content End -->
