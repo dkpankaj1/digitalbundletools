@@ -12,7 +12,8 @@
 
                             <ul class="breadcrumb-list flx-align gap-2">
                                 <li class="breadcrumb-list__item font-14 text-body">
-                                    <a href="{{route('home')}}" class="breadcrumb-list__link text-body hover-text-main">Home</a>
+                                    <a href="{{ route('home') }}"
+                                        class="breadcrumb-list__link text-body hover-text-main">Home</a>
                                 </li>
                                 <li class="breadcrumb-list__item font-14 text-body">
                                     <span class="breadcrumb-list__icon font-10"><i
@@ -120,9 +121,9 @@
                                         </a>
                                     </span>
                                     <div class="flx-align gap-2">
-                                        <h6 class="product-card__price mb-0">₹499.00</h6>
+                                        <h6 class="product-card__price mb-0">₹299.00</h6>
                                         <span
-                                            class="product-card__prevPrice text-decoration-line-through">₹4,999.00</span>
+                                            class="product-card__prevPrice text-decoration-line-through">₹7,999.00</span>
                                     </div>
                                 </div>
                                 <hr>
@@ -130,11 +131,11 @@
                                 <div class="d-flex w-100 justify-content-center mt-3">
                                     <div class="timer" id="timer"></div>
                                 </div>
-                                <button type="button"
+                                <a href="https://rzp.io/l/lwbSRI2pr7"
                                     class="btn btn-main d-flex w-100 justify-content-center align-items-center gap-2 pill px-sm-5 mt-24">
                                     <img src="assets/images/icons/add-to-cart.svg" alt="">
-                                    Add To Cart
-                                </button>
+                                    Buy now!
+                                </a>
 
 
 
@@ -267,11 +268,11 @@
 
                                 <div class="product-details__item  d-flex justify-content-center">
 
-                                    <button type="button"
-                                        class="btn btn-main d-flex justify-content-center align-items-center gap-2 pill px-sm-5 mt-32">
+                                    <a href="https://rzp.io/l/lwbSRI2pr7"
+                                        class="btn btn-main d-flex justify-content-center align-items-center gap-2 pill px-5 mt-32">
                                         <img src="assets/images/icons/add-to-cart.svg" alt="">
                                         Buy now
-                                    </button>
+                                    </a>
                                 </div>
 
 
@@ -342,7 +343,7 @@
                 let seconds = Math.floor((timeLeft / 1000) % 60);
 
                 // Display the result in the timer div
-                document.getElementById("timer").innerHTML = "Offer End " + hours + "h :" + minutes + "m :" + seconds +
+                document.getElementById("timer").innerHTML = "Hurry up! " + hours + "h :" + minutes + "m :" + seconds +
                     "s ";
 
                 // If the countdown is finished, display "Offer Ended"

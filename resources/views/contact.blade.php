@@ -62,29 +62,15 @@
                         <div class="mt-24">
                             <ul class="social-list">
                                 <li class="social-list__item">
-                                    <a href="https://www.facebook.com"
+                                    <a href="https://www.facebook.com/profile.php?id=61565824366564" target="_blank"
                                         class="social-list__link text-heading flx-center"><i
                                             class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a href="https://www.twitter.com" class="social-list__link text-heading flx-center">
-                                        <i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.instagram.com/digitalbundletools/" class="social-list__link text-heading flx-center" target="_blank">
+                                        <i class="fab fa-instagram"></i></a>
                                 </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.linkedin.com"
-                                        class="social-list__link text-heading flx-center"> <i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.pinterest.com"
-                                        class="social-list__link text-heading flx-center"> <i
-                                            class="fab fa-pinterest-p"></i></a>
-                                </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.pinterest.com"
-                                        class="social-list__link text-heading flx-center"> <i
-                                            class="fab fa-youtube"></i></a>
-                                </li>
+                                
                             </ul>
                         </div>
 

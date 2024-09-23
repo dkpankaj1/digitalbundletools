@@ -142,7 +142,8 @@
                 <div class="col-lg-5 col-sm-12">
                     <div class="footer-item">
                         <div class="footer-item__logo">
-                            <a href="{{ route('home') }}"> <img src="assets/images/logo/white-logo.png" alt=""></a>
+                            <a href="{{ route('home') }}"> <img src="assets/images/logo/white-logo.png"
+                                    alt=""></a>
                         </div>
                         <p class="footer-item__desc" style="text-align: justify">Welcome to DigitalBundleTools, where
                             innovation meets efficiency!
@@ -152,25 +153,16 @@
                         <div class="footer-item__social">
                             <ul class="social-list">
                                 <li class="social-list__item">
-                                    <a href="https://www.facebook.com" class="social-list__link flx-center"><i
+                                    <a href="https://www.facebook.com/profile.php?id=61565824366564"
+                                        class="social-list__link flx-center" target="_blank"><i
                                             class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li class="social-list__item">
-                                    <a href="https://www.twitter.com" class="social-list__link flx-center"> <i
-                                            class="fab fa-twitter"></i></a>
+                                    <a href="https://www.instagram.com/digitalbundletools/"
+                                        class="social-list__link flx-center" target="_blank"> <i
+                                            class="fab fa-instagram"></i></a>
                                 </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.linkedin.com" class="social-list__link flx-center"> <i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.pinterest.com" class="social-list__link flx-center"> <i
-                                            class="fab fa-pinterest-p"></i></a>
-                                </li>
-                                <li class="social-list__item">
-                                    <a href="https://www.pinterest.com" class="social-list__link flx-center"> <i
-                                            class="fab fa-youtube"></i></a>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -225,12 +217,13 @@
     <div class="bottom-footer">
         <div class="container container-two">
             <div class="bottom-footer__inner flx-between gap-3">
-                <p class="bottom-footer__text font-14"> Copyright &copy; 2024 DigitalBundleTools, All rights reserved.</p>
-                {{-- <div class="footer-links">
-                    <a href="#" class="footer-link font-14">Terms of service</a>
-                    <a href="#" class="footer-link font-14">Privacy Policy</a>
-                    <a href="#" class="footer-link font-14">cookies</a>
-                </div> --}}
+                <p class="bottom-footer__text font-14"> Copyright &copy; 2024 DigitalBundleTools, All rights reserved.
+                </p>
+                <div class="footer-links">
+                    <a href="{{ route('term-condition') }}" class="footer-link font-14">Terms of service</a>
+                    <a href="{{ route('privacy-policy') }}" class="footer-link font-14">Privacy Policy</a>
+                    <a href="{{ route('refund-policy') }}" class="footer-link font-14">Cancellation/Refund Policy</a>
+                </div>
             </div>
         </div>
     </div>
