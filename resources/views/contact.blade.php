@@ -47,15 +47,15 @@
 
                         <div class="contact-info__item-wrapper flx-between gap-4">
                             <div class="contact-info__item">
-                                <span class="contact-info__text text-capitalize d-block mb-1">Give Us A Call</span>
+                                <span class="contact-info__text text-capitalize d-block mb-1">On Whatsapp</span>
                                 <a href="tel:01812345678"
-                                    class="contact-info__link font-24 fw-500 text-heading hover-text-main">01812345678</a>
+                                    class="contact-info__link font-24 fw-500 text-heading hover-text-main">+91 9794445940</a>
                             </div>
                             <div class="contact-info__item">
                                 <span class="contact-info__text text-capitalize d-block mb-1">Give Us An
                                     Email</span>
                                 <a href="tel:dpmarket@gmail.com"
-                                    class="contact-info__link font-24 fw-500 text-heading hover-text-main">dpmarket@gmail.com</a>
+                                    class="contact-info__link font-24 fw-500 text-heading hover-text-main">contact@digitalbundletools.in</a>
                             </div>
                         </div>
 
