@@ -71,7 +71,7 @@
                     <div class="row mb-4 gap-4 gap-lg-0">
                         <div class="col-lg-8">
                             <div class="product-details__thumb">
-                                <img src="{{ asset('assets/images/product/product.jpg') }}" alt="">
+                                <img src="{{ asset('assets/images/product/new_product.png') }}" alt="">
                             </div>
                         </div>
                         <div class="col-lg-4">
@@ -121,6 +121,11 @@
                                                 alt=""></span>
                                         <span class="text">Instant Delivery via Email</span>
                                     </li>
+                                    <li class="sidebar-list__item flx-align gap-2 font-14 fw-300">
+                                        <span class="icon"><img src="assets/images/icons/check-cirlce.svg"
+                                                alt=""></span>
+                                        <span class="text">Last Update : Aug 10 2024</span>
+                                    </li>
                                 </ul>
 
                                 <div class="flx-between mt-3">
@@ -129,9 +134,9 @@
                                         </a>
                                     </span>
                                     <div class="flx-align gap-2">
-                                        <h6 class="product-card__price mb-0">₹399.00</h6>
+                                        <h6 class="product-card__price mb-0">₹99.00</h6>
                                         <span
-                                            class="product-card__prevPrice text-decoration-line-through">₹7,999.00</span>
+                                            class="product-card__prevPrice text-decoration-line-through">₹799.00</span>
                                     </div>
                                 </div>
                                 <hr>
@@ -144,21 +149,6 @@
                                     <img src="assets/images/icons/add-to-cart.svg" alt="">
                                     Buy now!
                                 </a>
-
-
-
-                                <!-- Meta Attribute List Start -->
-                                <ul class="meta-attribute">
-                                    <li class="meta-attribute__item">
-                                        <span class="name">Last Update</span>
-                                        <span class="details">Sep 01, 2024</span>
-                                    </li>
-                                    <li class="meta-attribute__item">
-                                        <span class="name">Category</span>
-                                        <span class="details">Script</span>
-                                    </li>
-                                </ul>
-                                <!-- Meta Attribute List End -->
                             </div>
                             <!-- ======================= Product Sidebar End ========================= -->
                         </div>
