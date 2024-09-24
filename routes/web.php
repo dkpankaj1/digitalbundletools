@@ -4,6 +4,7 @@
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\PolicyController;
 use App\Http\Controllers\WebsiteController;
+use App\Models\Visitor;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WebsiteController::class, 'index'])->name('home');
@@ -19,3 +20,6 @@ Route::get('privacy-policy', [PolicyController::class, 'privacyPolicy'])->name('
 Route::get('cancellation-refund-policy', [PolicyController::class, 'refundPolicy'])->name('refund-policy');
 
 Route::get('messages', [ContactUsController::class, 'index']);
+Route::get('get-visitor', function () {
+    return json_encode(Visitor::select(['ip_address', 'device', 'visited_at'])->get());
+});

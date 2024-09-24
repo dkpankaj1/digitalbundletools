@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 use App\Models\Subscriber;
+use App\Models\Visitor;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 class WebsiteController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $today = Carbon::now();
         $oneMonthAgo = $today->copy()->subMonth();
@@ -143,6 +144,13 @@ class WebsiteController extends Controller
                 "review" => "This bundle is a game-changer! I manage multiple businesses, and the variety of applications in this package allowed me to automate everything—inventory, HR, and even customer management. The customization options are top-notch!"
             ]
         ];
+
+        Visitor::create([
+            'ip_address' => $request->ip(),
+            'device' => $request->header('User-Agent'),
+            'visited_at' => Carbon::now(),
+        ]);
+
 
         // Generate testimonials with unique random dates
         $testimonials = array_map(function ($testimonial) use ($oneMonthAgo, $today) {
