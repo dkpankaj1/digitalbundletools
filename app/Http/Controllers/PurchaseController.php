@@ -30,13 +30,13 @@ class PurchaseController extends Controller
         ]);
 
         $amount = 99;
-
+        // Create the purchase order in the database
         $purchaseOrder = PurchaseOrder::create([
-            'order_id' => md5(time()),
+            'order_id' => md5(time()), // You might want to generate a more unique order_id
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'amount' => $amount,
+            'amount' => $amount, // Include amount in the order
         ]);
         if ($request->pg === "rezorpe") {
             return redirect('https://rzp.io/l/TfUx10Ht');
@@ -44,17 +44,16 @@ class PurchaseController extends Controller
 
         if ($request->pg === "phonepe") {
 
-            $redirectUrl = route('purchase.success');
-            $callbackUrl = route('purchase.callback');
+            $redirectUrl = route('purchase.success'); // URL to redirect after payment success
+            $callbackUrl = route('purchase.callback'); // URL to receive callback notifications
 
             $paymentRedirectUrl = $this->phonePePaymentService->initiatePayment(
                 $purchaseOrder->order_id,
-                ($amount * 100),
+                $amount * 100,
                 $redirectUrl,
                 $callbackUrl
             );
             return redirect($paymentRedirectUrl);
-
         }
         abort(404);
     }
