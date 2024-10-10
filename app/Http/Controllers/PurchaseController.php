@@ -60,29 +60,25 @@ class PurchaseController extends Controller
     }
 
     // Additional methods for success and callback handling
-    public function success()
+    public function success(Request $request)
     {
-        return view('purchase.success');
+        return view('purchase.success',['request' => $request->all()]);
     }
 
     public function callback(Request $request)
     {
-        // Handle the callback verification here
         $responseBody = $request->getContent();
         $xVerify = $request->header('x_verify');
-
-        // Log the response body for debugging
         Log::info('PhonePe Callback Response:', ['response_body' => $responseBody]);
 
         if ($this->phonePePaymentService->verifyCallback($responseBody, $xVerify)) {
-            // Handle success logic here, like updating the order status
             Log::info('Payment verification successful.');
             // You might want to update the order status in the database
             // For example:
             // $order = PurchaseOrder::where('order_id', $orderId)->first();
             // $order->update(['status' => 'paid']);
         } else {
-            // Handle verification failure
+
             Log::warning('Payment verification failed.');
         }
     }

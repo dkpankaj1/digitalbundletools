@@ -10,5 +10,9 @@
             </div>
         </div>
     </section>
-
+<pre>
+    @php
+        print_r($request);
+    @endphp
+</pre>
 </x-app-layouts>
