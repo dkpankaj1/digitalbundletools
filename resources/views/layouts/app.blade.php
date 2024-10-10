@@ -155,17 +155,17 @@
 
     <!-- ==================== Footer Start Here ==================== -->
     <footer class="footer ">
-        <img src="assets/images/shapes/pattern.png" alt="" class="bg-pattern">
-        <img src="assets/images/shapes/element1.png" alt="" class="element one">
-        <img src="assets/images/shapes/element2.png" alt="" class="element two">
-        <img src="assets/images/gradients/footer-gradient.png" alt="" class="bg--gradient">
+        <img src="{{asset('assets/images/shapes/pattern.png')}}" alt="" class="bg-pattern">
+        <img src="{{asset('assets/images/shapes/element1.png')}}" alt="" class="element one">
+        <img src="{{asset('assets/images/shapes/element2.png')}}" alt="" class="element two">
+        <img src="{{asset('assets/images/gradients/footer-gradient.png')}}" alt="" class="bg--gradient">
 
         <div class="container container-two">
             <div class="row gy-5 gap-1">
                 <div class="col-lg-5 col-sm-12">
                     <div class="footer-item">
                         <div class="footer-item__logo">
-                            <a href="{{ route('home') }}"> <img src="assets/images/logo/white-logo.png"
+                            <a href="{{ route('home') }}"> <img src="{{asset('assets/images/logo/white-logo.png')}}"
                                     alt=""></a>
                         </div>
                         <p class="footer-item__desc" style="text-align: justify">Welcome to DigitalBundleTools, where

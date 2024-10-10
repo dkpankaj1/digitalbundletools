@@ -61,6 +61,12 @@
 
     </section>
 
+    {{-- <pre>
+    @php
+        print_r(Session::all());
+    @endphp
+</pre> --}}
+
 
     <section class="contact padding-t-60 padding-b-120 section-bg position-relative z-index-1 overflow-hidden">
         <div class="container ">
@@ -76,7 +82,7 @@
                                         <label for="name"
                                             class="form-label mb-2 font-18 font-heading fw-600">Name</label>
                                         <input type="text" class="common-input common-input--grayBg border"
-                                            placeholder="Your name here" name="name" value="{{old('name')}}">
+                                            placeholder="Your name here" name="name" value="{{ old('name') }}">
                                         @error('name')
                                             <div class="invalid-feedback d-block">{{ $message }}</div>
                                         @enderror
@@ -86,7 +92,7 @@
                                         <label for="name"
                                             class="form-label mb-2 font-18 font-heading fw-600">Email</label>
                                         <input type="text" class="common-input common-input--grayBg border"
-                                            placeholder="Your name here" name="email" value="{{old('email')}}">
+                                            placeholder="Your name here" name="email" value="{{ old('email') }}">
                                         @error('email')
                                             <div class="invalid-feedback d-block">{{ $message }}</div>
                                         @enderror
@@ -96,23 +102,38 @@
                                         <label for="name"
                                             class="form-label mb-2 font-18 font-heading fw-600">Phone</label>
                                         <input type="text" class="common-input common-input--grayBg border"
-                                            placeholder="Your name here" name="phone" value="{{old('phone')}}">
+                                            placeholder="Your name here" name="phone" value="{{ old('phone') }}">
                                         @error('phone')
                                             <div class="invalid-feedback d-block">{{ $message }}</div>
                                         @enderror
                                     </div>
 
                                     <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6">
+                                                <label class="image-radio d-flex align-items-center">
+                                                    <input type="radio" name="pg" value="rezorpe">
+                                                    <img src="{{ asset('assets/images/rpay.png') }}" class="img-fluid "
+                                                        alt="Option 3">
+                                                </label>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6">
+                                                <label class="image-radio d-flex align-items-center">
+                                                    <input type="radio" name="pg" value="phonepe" checked>
+                                                    <img src="{{ asset('assets/images/phonepe.png') }}"
+                                                        class="img-fluid " alt="Option 3">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                        <label class="image-radio d-flex align-items-center">
-                                            <input type="radio" name="imageRadio" value="r-pay" checked>
-                                            <img src="{{ asset('assets/images/rpay.png') }}" class="img-fluid border" alt="Option 3">
-                                        </label>
+                                    <div class="col-12">
 
                                     </div>
 
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-main btn-lg pill w-100"> Pay Now</button>
+                                        <button type="submit" class="btn btn-main btn-lg pill w-100"> Pay
+                                            Now</button>
                                     </div>
                                 </div>
                             </form>
