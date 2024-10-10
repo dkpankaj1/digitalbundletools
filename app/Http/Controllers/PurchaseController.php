@@ -38,6 +38,7 @@ class PurchaseController extends Controller
             'phone' => $request->phone,
             'amount' => $amount, // Include amount in the order
         ]);
+        
         if ($request->pg === "rezorpe") {
             return redirect('https://rzp.io/l/TfUx10Ht');
         }

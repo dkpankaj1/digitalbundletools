@@ -33,7 +33,7 @@ class PhonePePaymentService
     public function initiatePayment(string $transactionId, int $amount, string $redirectUrl, string $callbackUrl): string
     {
         $request = PgPayRequestBuilder::builder()
-            ->merchantId(env('PHONEPE_MERCHANT_ID'))
+            ->merchantId("M22ADDTSFTLJC")
             ->amount($amount)
             ->merchantTransactionId($transactionId)
             ->redirectUrl($redirectUrl)
