@@ -23,7 +23,7 @@ Route::get('cancellation-refund-policy', [PolicyController::class, 'refundPolicy
 Route::get('purchase/create', [PurchaseController::class, 'create'])->name('purchase.create');
 Route::post('purchase/store', [PurchaseController::class, 'store'])->name('purchase.store');
 Route::get('purchase/success', [PurchaseController::class, 'success'])->name('purchase.success');
-Route::post('purchase/callback', [PurchaseController::class, 'callback'])->name('purchase.callback');
+Route::post('purchase/callback', [PurchaseController::class, 'callback'])->withoutMiddleware(['web'])->name('purchase.callback');
 
 Route::get('messages', [ContactUsController::class, 'index']);
 Route::get('get-visitor', function () {

@@ -42,4 +42,4 @@ jobs:
             php -r "unlink('composer-setup.php');"
             php -r "unlink('composer.phar');"
             php artisan optimize
-            php artisan migrate:fresh --seed
+            php artisan migrate

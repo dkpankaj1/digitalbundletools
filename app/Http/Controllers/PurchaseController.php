@@ -47,14 +47,15 @@ class PurchaseController extends Controller
 
             $redirectUrl = route('purchase.success'); // URL to redirect after payment success
             $callbackUrl = route('purchase.callback'); // URL to receive callback notifications
+            dd($callbackUrl);
 
-            $paymentRedirectUrl = $this->phonePePaymentService->initiatePayment(
-                $purchaseOrder->order_id,
-                $amount * 100,
-                $redirectUrl,
-                $callbackUrl
-            );
-            return redirect($paymentRedirectUrl);
+            // $paymentRedirectUrl = $this->phonePePaymentService->initiatePayment(
+            //     $purchaseOrder->order_id,
+            //     $amount * 100,
+            //     $redirectUrl,
+            //     $callbackUrl
+            // );
+            // return redirect($paymentRedirectUrl);
         }
         abort(404);
     }
