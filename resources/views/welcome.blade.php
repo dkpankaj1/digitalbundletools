@@ -144,7 +144,7 @@
                                 <div class="d-flex w-100 justify-content-center mt-3">
                                     <div class="timer" id="timer"></div>
                                 </div>
-                                <a href="https://rzp.io/l/TfUx10Ht"
+                                <a href="{{route('purchase.create')}}"
                                     class="btn btn-main d-flex w-100 justify-content-center align-items-center gap-2 pill px-sm-5 mt-24">
                                     <img src="assets/images/icons/add-to-cart.svg" alt="">
                                     Buy now!
@@ -259,7 +259,7 @@
 
                                 <div class="product-details__item  d-flex justify-content-center">
 
-                                    <a href="https://rzp.io/l/TfUx10Ht"
+                                    <a href="{{route('purchase.create')}}"
                                         class="btn btn-main d-flex justify-content-center align-items-center gap-2 pill px-5 mt-32">
                                         <img src="assets/images/icons/add-to-cart.svg" alt="">
                                         Buy now
@@ -316,7 +316,7 @@
     @push('scripts')
         <script>
             // Set the end time to 25 September 2024 at 00:00:00
-            let endTime = new Date("2024-09-25T00:00:00").getTime();
+            let endTime = new Date("2024-10-14T00:00:00").getTime();
 
             // Update the timer every 1 second
             let timerInterval = setInterval(function() {

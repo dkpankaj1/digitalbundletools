@@ -28,6 +28,29 @@
             font-weight: bold;
             color: #FF0000;
         }
+
+        <style>.image-radio {
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .image-radio input[type="radio"] {
+            margin-right: 10px;
+            /* Space between radio button and image */
+        }
+
+        .image-radio img {
+            border: 2px solid transparent;
+            height: 100px;
+            object-fit: cover;
+            transition: border-color 0.3s;
+        }
+
+        .image-radio input[type="radio"]:checked+img {
+            border-color: #007bff;
+            /* Highlight color when selected */
+        }
+    </style>
     </style>
 
 </head>

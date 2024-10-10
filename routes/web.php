@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\PolicyController;
+use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\WebsiteController;
 use App\Models\Visitor;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,9 @@ Route::post('/contact', [ContactUsController::class, 'store'])->name('contact.st
 Route::get('terms-and-conditions', [PolicyController::class, 'termsCondition'])->name('term-condition');
 Route::get('privacy-policy', [PolicyController::class, 'privacyPolicy'])->name('privacy-policy');
 Route::get('cancellation-refund-policy', [PolicyController::class, 'refundPolicy'])->name('refund-policy');
+
+Route::get('purchase/create',[PurchaseController::class,'create'])->name('purchase.create');
+Route::post('purchase/create',[PurchaseController::class,'store'])->name('purchase.store');
 
 Route::get('messages', [ContactUsController::class, 'index']);
 Route::get('get-visitor', function () {
