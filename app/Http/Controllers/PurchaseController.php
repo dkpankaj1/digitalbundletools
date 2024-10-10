@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\PaymentStatus;
 use App\Models\PurchaseOrder;
 use App\Services\PhonePePaymentService;
 use Illuminate\Http\Request;
@@ -29,7 +30,7 @@ class PurchaseController extends Controller
             'pg' => ['required', 'in:rezorpe,phonepe'],
         ]);
 
-        $amount = 1;
+        $amount = 99;
         // Create the purchase order in the database
         $purchaseOrder = PurchaseOrder::create([
             'order_id' => md5(time()), // You might want to generate a more unique order_id
@@ -38,7 +39,7 @@ class PurchaseController extends Controller
             'phone' => $request->phone,
             'amount' => $amount, // Include amount in the order
         ]);
-        
+
         if ($request->pg === "rezorpe") {
             return redirect('https://rzp.io/l/TfUx10Ht');
         }
@@ -47,40 +48,40 @@ class PurchaseController extends Controller
 
             $redirectUrl = route('purchase.success'); // URL to redirect after payment success
             $callbackUrl = route('purchase.callback'); // URL to receive callback notifications
-            dd($callbackUrl);
 
-            // $paymentRedirectUrl = $this->phonePePaymentService->initiatePayment(
-            //     $purchaseOrder->order_id,
-            //     $amount * 100,
-            //     $redirectUrl,
-            //     $callbackUrl
-            // );
-            // return redirect($paymentRedirectUrl);
+            $paymentRedirectUrl = $this->phonePePaymentService->initiatePayment(
+                $purchaseOrder->order_id,
+                $amount * 100,
+                $redirectUrl,
+                $callbackUrl
+            );
+            return redirect($paymentRedirectUrl);
         }
         abort(404);
     }
 
     // Additional methods for success and callback handling
-    public function success(Request $request)
+    public function success()
     {
-        return view('purchase.success',['request' => $request->all()]);
+        return view('purchase.success');
     }
 
     public function callback(Request $request)
     {
-        $responseBody = $request->getContent();
-        $xVerify = $request->header('x_verify');
-        Log::info('PhonePe Callback Response:', ['response_body' => $responseBody]);
+        $responseBody = $request->input('response');
+        $xVerify = $request->header('x-verify');
 
         if ($this->phonePePaymentService->verifyCallback($responseBody, $xVerify)) {
-            Log::info('Payment verification successful.');
-            // You might want to update the order status in the database
-            // For example:
-            // $order = PurchaseOrder::where('order_id', $orderId)->first();
-            // $order->update(['status' => 'paid']);
-        } else {
+            $data = $this->phonePePaymentService->decodePaymentResponse($responseBody);
 
-            Log::warning('Payment verification failed.');
+            if ($data['responseCode'] === "SUCCESS") {
+                $purchaseOrder = PurchaseOrder::where('order_id', $data['merchantTransactionId'])->first();
+
+                if ($purchaseOrder) {
+                    $purchaseOrder->update(['status' => PaymentStatus::COMPLETED]);
+                }
+            }
         }
     }
+
 }

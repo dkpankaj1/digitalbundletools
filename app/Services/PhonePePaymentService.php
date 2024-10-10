@@ -44,12 +44,29 @@ class PhonePePaymentService
         $response = $this->phonePePaymentsClient->pay($request);
         return $response->getInstrumentResponse()->getRedirectInfo()->getUrl();
     }
-    public function checkStatus(string $merchantTransactionId): PgCheckStatusResponse
+    public function checkStatus(string $transactionId): PgCheckStatusResponse
     {
-        return $this->phonePePaymentsClient->statusCheck($merchantTransactionId);
+        return $this->phonePePaymentsClient->statusCheck($transactionId);
     }
     public function verifyCallback(string $responseBody, string $xVerify): bool
     {
         return $this->phonePePaymentsClient->verifyCallback($responseBody, $xVerify);
+    }
+
+    public function decodePaymentResponse(string $base64Response): array
+    {
+        $decodedResponse = base64_decode($base64Response);
+        $responseData = json_decode($decodedResponse, true);
+        
+        return [
+            'status' => $responseData['success'],
+            'merchantTransactionId' => $responseData['data']['merchantTransactionId'] ?? null,
+            'transactionId' => $responseData['data']['transactionId'] ?? null,
+            'amount' => $responseData['data']['amount'] ?? null,
+            'state' => $responseData['data']['state'] ?? null,
+            'responseCode' => $responseData['data']['responseCode'] ?? null,
+            'message' => $responseData['message'] ?? 'Payment successful',
+            'paymentInstrument' => $responseData['data']['paymentInstrument'] ?? null,
+        ];
     }
 }
