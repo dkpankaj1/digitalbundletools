@@ -29,7 +29,7 @@ class PurchaseController extends Controller
             'pg' => ['required', 'in:rezorpe,phonepe'],
         ]);
 
-        $amount = 99;
+        $amount = 1;
         // Create the purchase order in the database
         $purchaseOrder = PurchaseOrder::create([
             'order_id' => md5(time()), // You might want to generate a more unique order_id
