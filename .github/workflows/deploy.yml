@@ -10,10 +10,6 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: "8.2"
-      - uses: actions/checkout@v2
-
-      - name: Install composer Dependencies
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Install SSH key
         run: |
@@ -43,5 +39,4 @@ jobs:
             php -r "unlink('composer-setup.php');"
             php -r "unlink('composer.phar');"
             php artisan optimize
-            php artisan migrate:fresh --seed
-
+            php artisan migrate

@@ -240,8 +240,8 @@
     <div class="bottom-footer">
         <div class="container container-two">
             <div class="bottom-footer__inner flx-between gap-3">
-                <p class="bottom-footer__text font-14"> Copyright &copy; 2024 DigitalBundleTools, All rights reserved.
-                </p>
+                <p class="bottom-footer__text font-14">Manage BY : Dipankar Kumar Pankaj.</p>
+                <p class="bottom-footer__text font-14"> Copyright &copy; 2024 DigitalBundleTools, All rights reserved.</p>
                 <div class="footer-links">
                     <a href="{{ route('term-condition') }}" class="footer-link font-14">Terms of service</a>
                     <a href="{{ route('privacy-policy') }}" class="footer-link font-14">Privacy Policy</a>
