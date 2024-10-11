@@ -24,20 +24,21 @@ class PurchaseController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'], // Name must be a string and not exceed 255 characters
-            'email' => ['required', 'email', 'max:255', 'unique:users,email'], // Email must be valid, unique, and not exceed 255 characters
-            'phone' => ['required', 'regex:/^([0-9\s\-\+\(\)]*)$/', 'min:10', 'max:15'], // Phone must be a valid number (supporting common formats) and have length between 10-15 digits
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email'],
+            'phone' => ['required', 'regex:/^([0-9\s\-\+\(\)]*)$/', 'min:10', 'max:15'],
             'pg' => ['required', 'in:rezorpe,phonepe'],
         ]);
 
         $amount = 99;
-        // Create the purchase order in the database
+
         $purchaseOrder = PurchaseOrder::create([
-            'order_id' => md5(time()), // You might want to generate a more unique order_id
+            'order_id' => md5(time()),
             'name' => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'amount' => $amount, // Include amount in the order
+            "vendor" => $request->pg,
+            'amount' => $amount,
         ]);
 
         if ($request->pg === "rezorpe") {
@@ -46,8 +47,8 @@ class PurchaseController extends Controller
 
         if ($request->pg === "phonepe") {
 
-            $redirectUrl = route('purchase.success'); // URL to redirect after payment success
-            $callbackUrl = route('purchase.callback'); // URL to receive callback notifications
+            $redirectUrl = route('purchase.success');
+            $callbackUrl = route('purchase.callback');
 
             $paymentRedirectUrl = $this->phonePePaymentService->initiatePayment(
                 $purchaseOrder->order_id,
@@ -60,7 +61,6 @@ class PurchaseController extends Controller
         abort(404);
     }
 
-    // Additional methods for success and callback handling
     public function success()
     {
         return view('purchase.success');

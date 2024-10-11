@@ -14,6 +14,7 @@ class PurchaseOrder extends Model
         "email",
         "phone",
         "amount",
+        "vendor",
         "status",
     ];
 }
